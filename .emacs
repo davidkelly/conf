@@ -3,7 +3,6 @@
 (set-terminal-coding-system 'utf-8)
 (prefer-coding-system       'utf-8)
 (set-language-environment   "UTF-8")
-(server-start)
 
 ; Use option key as META, for parity with Terminal emacs
 (setq mac-option-modifier 'meta)
@@ -23,11 +22,24 @@
 (load "hud-preferences.el")
 (load "color-theme-solarized.el")
 (color-theme-solarized-dark)
-(setq x-select-enable-clipboard t)
+
 
 ;DK: line numbering stuff
 (require 'linum) ;; Line numbering - M-x linum
 (global-linum-mode 1)
+
+;---------------------------------------------------------
+; Markdown (.markdown and .md files only)
+;---------------------------------------------------------
+(autoload 'markdown-mode "markdown-mode"
+   "Major mode for editing Markdown files" t)
+(add-to-list 'auto-mode-alist '("\\.markdown\\'" . markdown-mode))
+(add-to-list 'auto-mode-alist '("\\.md\\'" . markdown-mode))
+
+;---------------------------------------------------------
+; Go
+;---------------------------------------------------------
+(require 'go-mode-load)
 
 ;---------------------------------------------------------
 ; nxhtml

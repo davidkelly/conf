@@ -4,6 +4,10 @@
 (prefer-coding-system       'utf-8)
 (set-language-environment   "UTF-8")
 
+; DK: try out ido
+(require 'ido)
+(ido-mode t)
+
 ; Use option key as META, for parity with Terminal emacs
 (setq mac-option-modifier 'meta)
 
@@ -80,6 +84,9 @@
  '(column-number-mode t)
  '(display-time-mode t)
  '(face-font-family-alternatives (quote (("anonymous" "courier" "fixed") ("helv" "helvetica" "arial" "fixed"))))
+ '(gud-gdb-command-name "gdb --annotate=1")
+ '(ido-enable-flex-matching t)
+ '(large-file-warning-threshold nil)
  '(show-paren-mode t)
  '(tramp-encoding-shell "/bin/bash")
  '(tramp-verbose 2)

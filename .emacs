@@ -8,6 +8,9 @@
 (require 'ido)
 (ido-mode t)
 
+; DK: try windmove stuff
+(windmove-default-keybindings) 
+
 ; Use option key as META, for parity with Terminal emacs
 (setq mac-option-modifier 'meta)
 
@@ -104,4 +107,3 @@
 (global-set-key "\C-cl" 'org-store-link) 
 (global-set-key "\C-ca" 'org-agenda) 
 (global-set-key "\C-cb" 'org-iswitchb)
-

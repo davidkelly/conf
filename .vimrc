@@ -1,5 +1,9 @@
 syntax enable
 set number
+set nowrap
+set modeline
+set ls=2
+set clipboard=unnamedplus
 set background=dark
 let g:solarized_degrade=1
 let g:solarized_termcolors=256

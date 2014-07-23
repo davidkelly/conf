@@ -1,0 +1,16 @@
+[color]
+	ui = auto
+[push]
+	default = current
+[rerere]
+	enabled = 1
+[branch]
+	autosetuprebase = always
+[user]
+	email = davidmichaelkelly@gmail.com
+	name = David Kelly
+[alias]
+  pu      = !"git fetch origin -v; git fetch upstream -v; git merge upstream/master"
+  lasttag = !sh -c ' git tag | grep $1 | tail -n 1 ' -
+  lastsha = !sh -c ' git show-ref `git lasttag $1`| cut -c-40' -
+  db      = !sh -c ' git branch -a --contains `git lastsha $1`' -

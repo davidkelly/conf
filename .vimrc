@@ -1,8 +1,9 @@
+execute pathogen#infect()
 filetype off
 filetype plugin indent off
 set runtimepath+=/usr/local/opt/go/libexec/misc/vim
 filetype plugin indent on
-
+autocmd BufWritePre *.go Fmt
 
 syntax on 
 set number

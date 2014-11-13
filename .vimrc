@@ -22,3 +22,6 @@ set smarttab
 set cindent
 set expandtab
 colorscheme solarized
+
+:nmap <C-n> :tabn <CR>
+:nmap <C-p> :tabp <CR>

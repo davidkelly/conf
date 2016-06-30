@@ -16,8 +16,8 @@ set ls=2
 set background=dark
 let g:solarized_degrade=1
 let g:solarized_termcolors=256
-set tabstop=2
-set shiftwidth=2
+set tabstop=4
+set shiftwidth=4
 set smartindent
 set autoindent
 set smarttab

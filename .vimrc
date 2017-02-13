@@ -7,6 +7,7 @@ execute pathogen#helptags()
 "autocmd BufWritePre *.go Fmt
 
 syntax on 
+set nocompatible
 set number
 set noeb
 "set nowrap

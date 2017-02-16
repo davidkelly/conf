@@ -6,7 +6,7 @@ execute pathogen#helptags()
 "filetype plugin indent on
 "autocmd BufWritePre *.go Fmt
 
-syntax on 
+syntax on
 set nocompatible
 set number
 set noeb
@@ -29,6 +29,9 @@ set nowrap
 set dir=~/.vimswap//
 set backupdir=~/.vimbackup//
 colo solarized
+
+" for vim-better-whitespace plugin
+autocmd BufEnter * EnableStripWhitespaceOnSave
 
 " language-specific settings
 autocmd Filetype ruby setlocal tabstop=2 shiftwidth=2

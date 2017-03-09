@@ -8,6 +8,7 @@ execute pathogen#helptags()
 
 syntax on
 set nocompatible
+set backspace=2
 set number
 set noeb
 "set nowrap
@@ -36,6 +37,20 @@ autocmd BufEnter * EnableStripWhitespaceOnSave
 " language-specific settings
 autocmd Filetype ruby setlocal tabstop=2 shiftwidth=2
 autocmd Filetype python setlocak tabstop=2 shiftwidth=2
+
+" syntastic settings
+"set statusline+=%#warningmsg#
+"set statusline+=%{SyntasticStatuslineFlag()}
+"set statusline+=%*
+
+"let g:syntastic_always_populate_loc_list = 1
+"let g:syntastic_auto_loc_list = 1
+"let g:syntastic_check_on_open = 1
+"let g:syntastic_check_on_wq = 0
+
+"let g:syntastic_cpp_checkers = ['gcc']
+"let g:syntastic_cpp_compiler = 'gcc'
+"let g:syntastic_cpp_compiler_options = '-std=c++11'
 
 :nmap <C-n> :tabn <CR>
 :nmap <C-p> :tabp <CR>
